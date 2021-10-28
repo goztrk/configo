@@ -44,7 +44,15 @@ func main() {
     // it saves the file with default values.
     _ = configo.Load("server")
 
-	// now conf has updated values from `server.json` file
+    // now conf has updated values from `server.json` file
+    // config/server.json source:
+    // {
+    //   "server-address": "127.0.0.1",
+    //   "server-port": "80",
+    // }
+    
+    // Get configuration struct from configo:
+    c, _ := configo.Get("server").(*config)
 }
 
 ```
@@ -64,7 +72,7 @@ Saves given configuration group to a file. Overrides existing file with new one.
 Saves all existing configuration groups to their files.
 
 ### `configo.SetPath(path string) error`
-Sets the folder that holds configuration files.
+Sets the folder that holds configuration files. Default path is `./config/`
 
 ## Planned Features
 - [ ] Write tests
