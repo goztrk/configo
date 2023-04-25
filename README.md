@@ -4,7 +4,7 @@ configo is a lightweight configuration manager that requires no external library
 
 ## Install
 ```shell
-go get github.com/Quanthir/configo
+go get github.com/goztrk/configo
 ```
 
 ## Why configo?
@@ -21,7 +21,7 @@ package main
 import (
     "os"
 
-    "github.com/Quanthir/configo"
+    "github.com/goztrk/configo"
 )
 
 type config struct {
